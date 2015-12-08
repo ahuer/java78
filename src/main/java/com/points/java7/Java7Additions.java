@@ -1,11 +1,9 @@
 package com.points.java7;
 
 import java.io.BufferedReader;
-import java.io.BufferedWriter;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.FileReader;
-import java.io.FileWriter;
 import java.io.IOException;
 
 import org.apache.commons.io.FileUtils;
@@ -33,7 +31,7 @@ public class Java7Additions {
 	 * at the end of the statement. Any object that implements java.lang.AutoCloseable, 
 	 * which includes all objects which implement java.io.Closeable, can be used as a resource.
 	 */
-	public static boolean tryWithResources(String filename) throws FileNotFoundException, IOException {
+	public static boolean tryWithResources(String filename) {
 		File file = new File(filename);
 		try (BufferedReader bufferedReader = new BufferedReader(new FileReader(file)) ) {
 			bufferedReader.readLine();
@@ -51,7 +49,7 @@ public class Java7Additions {
 	 * Handling More Than One Type of Exception
 	 * Use a pipe to handle more than one exception type at a time
 	 */	
-	public static boolean catchingMultipleExceptions(String filename) throws ArrayIndexOutOfBoundsException, IOException {
+	public static boolean catchingMultipleExceptions(String filename) {
 		File file = new File(filename);
 		try (BufferedReader bufferedReader = new BufferedReader(new FileReader(file)) ) {
 			bufferedReader.readLine();
