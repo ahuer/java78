@@ -13,7 +13,7 @@ The rate of object allocation rate or promotion varies significantly.
 Undesired long garbage collection or compaction pauses (longer than 0.5 to 1 second)
 
 
-b) - can you open more than one?
+b) 
 The try-with-resources Statement
 The try-with-resources statement ensures that each resource is closed at the end of the statement. Any object that implements java.lang.AutoCloseable, which includes all objects which implement java.io.Closeable, can be used as a resource.
 
@@ -24,7 +24,7 @@ static String readFirstLineFromFile(String path) throws IOException {
 }
 
 
-c) - why now?
+c) 
 In the JDK 7 release, you can use a String object in the expression of a switch statement:
 
 public String getTypeOfDayWithSwitchStatement(String dayOfWeekArg) {
@@ -62,7 +62,7 @@ catch (IOException|SQLException ex) {
 
 
 Java 1.8
-a) - regular lambda
+a) - lambda
 We propose extending the Java Language to support compact lambda expressions (otherwise known as closures or anonymous methods.) Additionally, we will extend the language to support a conversion known as "SAM conversion" to allow lambda expressions to be used where a single-abstract-method interface or class is expected, enabling forward compatibility of existing libraries.
 
 We propose extending the semantics of interfaces in the Java Language to support virtual extension methods, whereby an interface can nominate a static default method to stand in for the implementation of an interface method in the event that an implementation class does not provide an implementation of the extension method. This enables interfaces to be augmented with new methods "after the fact" without breaking existing implementation classes.
